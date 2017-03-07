@@ -3,9 +3,7 @@
 Info app for Shabus -  Cooperative Transportation Association of Jerusalem
  
 
-![project logo (this one for is taken from basecamp - a project management service)]......!!!!!
-(https://github.com/Shaileh/Shabus-INFO-APP/blob/master/LOGO.png)
-(https://www.startisrael.co.il/uploads/images/logo_svg.png)
+![project logo (this one for is taken from basecamp - a project management service)]......!!!!(https://www.startisrael.co.il/uploads/images/logo_svg.png)
 
 
 ## Tools & Practices
