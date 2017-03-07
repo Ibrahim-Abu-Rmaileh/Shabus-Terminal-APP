@@ -44,18 +44,3 @@ Please visit our wiki for furthur project info:
 
 ### [Team Page](../../wiki/team)
 
-### Project Documents
-- [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))
-- [Project Inception](../../wiki/inception)
-- [Software Requirements Specification](../../wiki/srs)
-- [Software Design Specification](../../wiki/sds)
-
-### Iteration Pages
-- [Iteration 0 - ZFR](../../wiki/iter0-zfr)
-- [Iteration 1 - MVP]()
-- [Iteration 2 - Feature X]()
-- [Iteration 3 - Feature Y]()
-- [Iteration 4 - Feature Z]()
-
-
-
