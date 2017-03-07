@@ -1,6 +1,6 @@
-# project-template
+# Shabus INFO APP
 
-A template repository with wiki for a team project at JCE's software engineering course (replace with the mission of your project).
+Info app for Shabus -  Cooperative Transportation Association of Jerusalem
 
 (See also:rRecommended [checklist](https://github.com/ddbeck/readme-checklist/blob/master/checklist.md) for a README) 
 
