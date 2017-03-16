@@ -35,7 +35,7 @@ Please visit our wiki for furthur project info:
 ### [Team Page](../../wiki/team)
 
 ### Project Documents
-- [Project Idea]() ([Presentation]()
+- [Project Idea](../../blob/master/shabus.pdf)
 - [Project Inception](../../wiki/Inception)
 - [Software Requirements Specification](../../wiki/srs)
 - [Software Design Specification](../../wiki/sds)
