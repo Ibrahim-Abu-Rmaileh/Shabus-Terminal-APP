@@ -21,7 +21,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 | Contributors | [![GitHub contributors](https://img.shields.io/github/contributors/jce-il/project-template.svg)](https://github.com/jce-il/project-template/graphs/contributors)|
 | Documnetation | [![Inline docs](http://inch-ci.org/github/jce-il/project-template.svg?branch=master)](http://inch-ci.org/github/jce-il/project-template) |
 
-## Please visit our [live application](https://demo.reactstarterkit.com/)
+## Please visit our [live application](https://www.shabus.co.il/)
 - Alright, currently only a landing page...
 
 
