@@ -1,11 +1,15 @@
-# Shabus INFO APP
+# Shabus Bus Terminal
 
 
  
 
  ![project logo (this one for is taken from basecamp - a project management service)](https://www.startisrael.co.il/uploads/images/logo_svg.png)
  
-Info app for Shabus -  Cooperative Transportation Association of Jerusalem
+Bus Terminal application for Shabus -  Cooperative Transportation Association of Jerusalem
+
+In every Shabus bus there is a Tablet (or any other smart the device). This Smart device was used as some sort of Terminal for the driver and the Bus Clients<br/>
+<b>Our application is the Beating heart of this "Terminal".</b><br/>
+The application will escort the driver and the Clients all over the night shift until the bus will return the party people and the driver home safely :>
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
