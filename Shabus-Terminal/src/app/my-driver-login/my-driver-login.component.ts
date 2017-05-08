@@ -11,5 +11,10 @@ export class MyDriverLoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  onClickMe(password){
+    console.log(password.value);
+  }
+  buttonOnIfNotEmpty(hello){
+    console.log(hello);
+  }
 }

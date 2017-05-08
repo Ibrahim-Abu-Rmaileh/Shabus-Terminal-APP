@@ -1,3 +1,10 @@
-<p>
-  my-driver-login works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input (input)="buttonOnIfNotEmpty($event)" type="input" #password class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button [disabled]=true type="submit" (click)="onClickMe(password)" class="btn btn-default">Submit</button>
+</form>
