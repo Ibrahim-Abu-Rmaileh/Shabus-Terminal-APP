@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MyHeaderComponent } from './my-header/my-header.component';
+import { MyDriverLoginComponent } from './my-driver-login/my-driver-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyHeaderComponent
+    MyHeaderComponent,
+    MyDriverLoginComponent
   ],
   imports: [
     BrowserModule,
