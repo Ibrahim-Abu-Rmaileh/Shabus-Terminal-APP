@@ -6,12 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MyHeaderComponent } from './my-header/my-header.component';
 import { MyDriverLoginComponent } from './my-driver-login/my-driver-login.component';
+import { MyClientComponent } from './my-client/my-client.component';
+import { MyNavmenuComponent } from './my-navmenu/my-navmenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyHeaderComponent,
-    MyDriverLoginComponent
+    MyDriverLoginComponent,
+    MyClientComponent,
+    MyNavmenuComponent
   ],
   imports: [
     BrowserModule,
