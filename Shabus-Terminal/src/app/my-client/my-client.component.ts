@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-client.component.css']
 })
 export class MyClientComponent implements OnInit {
-
-  constructor() { }
+  clientCounter: number;
+  constructor() {
+    this.clientCounter=1;
+   }
 
   ngOnInit() {
   }
+  addClient(){
+  if(this.clientCounter<5)
+  this.clientCounter++;
+  //console.log(this.clientCounter);
+}
+removeClient(){
+  if(this.clientCounter>1){
+    this.clientCounter--;
+  }
+}
+
 
 }
