@@ -1,9 +1,12 @@
+<div class="container">
+
 <h1>זיהוי נוסע</h1>
 <form>
- <input type="input" class="form-control">
+ <input (input)="isShabusMember($event)" type="input"  class="form-control">
 </form>
 <div>
 <img class="buttons" src="https://github.com/Shaileh/Shabus-Terminal-APP/blob/master/Materials/plus.png?raw=true" (click)="addClient()">
 <div class="buttons" id="clientCounterDiv">{{clientCounter}}</div>
 <img class="buttons" src="https://github.com/Shaileh/Shabus-Terminal-APP/blob/master/Materials/minus.png?raw=true" (click)="removeClient()">
+</div>
 </div>
