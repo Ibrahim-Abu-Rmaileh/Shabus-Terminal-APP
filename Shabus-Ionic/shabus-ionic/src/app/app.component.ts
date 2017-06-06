@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
+import { MyClientPage } from '../pages/my-client/my-client';//--------//
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +15,7 @@ import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//-
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = MyDriverLoginPage;
+  rootPage: any = MyClientPage;
 
   pages: Array<{title: string, component: any}>;
 

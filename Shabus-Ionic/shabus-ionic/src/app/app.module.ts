@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 
 
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
+import { MyClientPage } from '../pages/my-client/my-client';//--------//
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    MyDriverLoginPage
+    MyDriverLoginPage,
+    MyClientPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    MyDriverLoginPage
+    MyDriverLoginPage,
+    MyClientPage
   ],
   providers: [
     StatusBar,
