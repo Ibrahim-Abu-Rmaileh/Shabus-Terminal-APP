@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="dark">
     <ion-title>my-driver-login</ion-title>
   </ion-navbar>
 
@@ -15,4 +15,22 @@
 
 <ion-content padding>
 
+    <img src="https://camo.githubusercontent.com/49bafc8338016730ab79dfb4320c328a2a4e91c8/68747470733a2f2f7777772e737461727469737261656c2e636f2e696c2f75706c6f6164732f696d616765732f6c6f676f5f7376672e706e67">
+
+    <!--<div class="form-group">-->
+      <ion-input type="text" placeholder="שם פרטי ושם משפחה" text-center margin-top [(ngModel)]="username"></ion-input>
+      <ion-input type="password" placeholder="סיסמא" text-center margin-top [(ngModel)]="password"></ion-input>
+    <!--</div>-->
+ 
+    <button ion-button block type="submit" (click)="checkDriver()" color="light" margin-top>התחבר</button>
+ 
+
+  
+
+
+
 </ion-content>
+
+
+
+

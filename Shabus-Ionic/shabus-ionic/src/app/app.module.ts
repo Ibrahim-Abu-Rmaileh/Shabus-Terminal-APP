@@ -6,6 +6,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
+
+import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
+
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -13,7 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    MyDriverLoginPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    MyDriverLoginPage
   ],
   providers: [
     StatusBar,

@@ -6,13 +6,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
+import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = MyDriverLoginPage;
 
   pages: Array<{title: string, component: any}>;
 
