@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
+import { MyMoovitPage } from '../pages/my-moovit/my-moovit';//--------//
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,7 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     MyDriverLoginPage,
-    MyClientPage
+    MyClientPage,
+    MyMoovitPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     MyDriverLoginPage,
-    MyClientPage
+    MyClientPage,
+    MyMoovitPage
   ],
   providers: [
     StatusBar,

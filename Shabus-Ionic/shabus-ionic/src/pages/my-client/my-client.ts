@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { MyMoovitPage } from '../my-moovit/my-moovit';//--------//
+
 /**
  * Generated class for the MyClientPage page.
  *
@@ -15,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class MyClientPage {
 
   clientCounter: number;
-  phoneNumber="054-1234567";
+  phoneNumber: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.clientCounter=1;
@@ -41,11 +43,18 @@ export class MyClientPage {
   }
 
   isShabusMember(input){
-    console.log(input.target.value);
-    console.log(this.phoneNumber);
+    //console.log(input.target.value);
+    //console.log(this.phoneNumber);
+    this.phoneNumber = input.target.value;
     if(input.target.value===this.phoneNumber){
       console.log("Client is shabus member");
     }
+  }
+
+
+  GoToMoovitPage(){
+    let phoneNum = this.phoneNumber;
+    this.navCtrl.push(MyMoovitPage, {phoneNum});
   }
 
 

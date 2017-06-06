@@ -14,11 +14,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MyMoovitPage {
 
+  phoneNumber;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.phoneNumber = this.navParams.get('phoneNum');
+    console.log("phone is:" + this.phoneNumber);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyMoovitPage');
+  }
+
+  goBack(){
+    this.navCtrl.pop();
   }
 
 }
