@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { MyClientPage } from '../my-client/my-client';//--------//
+
 /**
  * Generated class for the MyDriverLoginPage page.
  *
@@ -27,10 +29,10 @@ export class MyDriverLoginPage {
   }
 
 
-  checkDriver(){
-    //this.navCtrl.setRoot();
+  login(){
     console.log(this.username);
     console.log(this.password);
+    this.navCtrl.setRoot(MyClientPage);
   }
 
 

@@ -16,7 +16,7 @@ import { MyClientPage } from '../pages/my-client/my-client';//--------//
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = MyClientPage;
+  rootPage: any = MyDriverLoginPage;
 
   pages: Array<{title: string, component: any}>;
 
