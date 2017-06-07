@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
 import { MyCouponsPage } from '../pages/my-coupons/my-coupons';//--------//
+import { MyShekelPerKmPage } from '../pages/my-shekel-per-km/my-shekel-per-km';//--------//
 
 
 @Component({
@@ -28,7 +29,9 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'קופונים', component: MyCouponsPage}
+      { title: 'נוסעים', component: MyClientPage},
+      { title: 'קופונים', component: MyCouponsPage},
+      { title: 'שקל לק"מ', component: MyShekelPerKmPage}
     ];
 
   }
@@ -45,7 +48,10 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    if(page.title == 'קופונים' || page.title == 'שקל לק"מ')
+        this.nav.push(page.component);
+    else
+        this.nav.setRoot(page.component);
   }
 
   logout(){

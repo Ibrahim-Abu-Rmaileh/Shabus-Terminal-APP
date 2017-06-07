@@ -11,6 +11,7 @@ import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//-
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
 import { MyMoovitPage } from '../pages/my-moovit/my-moovit';//--------//
 import { MyCouponsPage } from '../pages/my-coupons/my-coupons';//--------//
+import { MyShekelPerKmPage } from '../pages/my-shekel-per-km/my-shekel-per-km';//--------//
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyDriverLoginPage,
     MyClientPage,
     MyMoovitPage,
-    MyCouponsPage
+    MyCouponsPage,
+    MyShekelPerKmPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyDriverLoginPage,
     MyClientPage,
     MyMoovitPage,
-    MyCouponsPage
+    MyCouponsPage,
+    MyShekelPerKmPage
   ],
   providers: [
     StatusBar,
