@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
+import { MyCouponsPage } from '../pages/my-coupons/my-coupons';//--------//
 
 
 @Component({
@@ -26,7 +27,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'List', component: ListPage },
+      { title: 'קופונים', component: MyCouponsPage}
     ];
 
   }

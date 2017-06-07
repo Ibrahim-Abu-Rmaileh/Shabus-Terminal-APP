@@ -10,6 +10,7 @@ import { ListPage } from '../pages/list/list';
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
 import { MyMoovitPage } from '../pages/my-moovit/my-moovit';//--------//
+import { MyCouponsPage } from '../pages/my-coupons/my-coupons';//--------//
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     MyDriverLoginPage,
     MyClientPage,
-    MyMoovitPage
+    MyMoovitPage,
+    MyCouponsPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     MyDriverLoginPage,
     MyClientPage,
-    MyMoovitPage
+    MyMoovitPage,
+    MyCouponsPage
   ],
   providers: [
     StatusBar,
