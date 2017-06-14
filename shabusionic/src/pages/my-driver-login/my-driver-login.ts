@@ -32,7 +32,17 @@ content:' ...מתחבר'
     this.auth.signin(this.username,this.password).then(data => {
 loading.dismiss();
 
-  setTimeout( nothing => { this.auth.logout()}  ,
+  setTimeout( nothing => {
+
+const alert=this.alert.create({
+  title:"המשמרת הסתיימה",
+buttons:['Ok']
+
+});
+alert.present();
+
+     this.auth.logout()
+},
    21600000);
 
 
@@ -47,11 +57,7 @@ buttons:['Ok']
 });
 alert.present();
     });
-    // console.log(this.username);
-    // console.log(this.password);
-   
-   
-   // this.navCtrl.setRoot(MyClientPage);
+  
   }
 
 }
