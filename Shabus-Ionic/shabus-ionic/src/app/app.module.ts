@@ -5,8 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-
-
+import { Authunication} from '../services/auth';
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
 import { MyMoovitPage } from '../pages/my-moovit/my-moovit';//--------//
@@ -42,10 +41,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyMoovitPage,
     MyCouponsPage,
     MyShekelPerKmPage
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
+   Authunication,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

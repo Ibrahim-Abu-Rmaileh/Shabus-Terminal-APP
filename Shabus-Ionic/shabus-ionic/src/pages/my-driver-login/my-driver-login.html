@@ -4,6 +4,10 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+
+
+
 <ion-header>
 
   <ion-navbar color="dark">
@@ -13,21 +17,16 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding >
 
-    <img src="https://camo.githubusercontent.com/49bafc8338016730ab79dfb4320c328a2a4e91c8/68747470733a2f2f7777772e737461727469737261656c2e636f2e696c2f75706c6f6164732f696d616765732f6c6f676f5f7376672e706e67">
+    <img src="../../assets/68747470733a2f2f7777772e737461727469737261656c2e636f2e696c2f75706c6f6164732f696d616765732f6c6f676f5f7376672e706e67.png">
 
     <!--<div class="form-group">-->
       <ion-input type="text" placeholder="שם פרטי ושם משפחה" text-center margin-top [(ngModel)]="username"></ion-input>
       <ion-input type="password" placeholder="סיסמא" text-center margin-top [(ngModel)]="password"></ion-input>
     <!--</div>-->
  
-    <button ion-button block type="submit" (click)="login()" color="light" margin-top>התחבר</button>
- 
-
-  
-
-
+    <button ion-button block  (click)="onsignin()" color="blue" margin-top>התחבר</button>
 
 </ion-content>
 
