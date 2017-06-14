@@ -3,8 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { Authunication} from '../services/auth';
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
@@ -19,8 +17,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage,
     MyDriverLoginPage,
     MyClientPage,
     MyMoovitPage,
@@ -34,8 +30,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage,
     MyDriverLoginPage,
     MyClientPage,
     MyMoovitPage,

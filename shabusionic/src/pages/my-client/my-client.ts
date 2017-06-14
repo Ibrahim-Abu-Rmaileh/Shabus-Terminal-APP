@@ -23,9 +23,6 @@ export class MyClientPage {
     this.clientCounter=1;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MyClientPage');
-  }
 
 
 

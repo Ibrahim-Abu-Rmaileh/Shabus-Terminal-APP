@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams ,AlertController} from 'ionic-angul
 import{ LoadingController} from 'ionic-angular'
  //import { MyClientPagerror.messagee } from '../my-client/my-client';//--------//
 import {Authunication} from '../../services/auth';
-import {MyClientPage }from '../my-client/my-client';
 /**
  * Generated class for the MyDriverLoginPage page.
  *
@@ -32,8 +31,6 @@ content:' ...מתחבר'
      loading.present();
     this.auth.signin(this.username,this.password).then(data => {
 loading.dismiss();
-this.navCtrl.setRoot(MyClientPage);
-
 
     }).catch(error => {
      loading.dismiss();
