@@ -32,6 +32,11 @@ content:' ...מתחבר'
     this.auth.signin(this.username,this.password).then(data => {
 loading.dismiss();
 
+  setTimeout( nothing => { this.auth.logout()}  ,
+   21600000);
+
+
+
     }).catch(error => {
      loading.dismiss();
 const alert=this.alert.create({
