@@ -20,7 +20,7 @@
 
     <img src="../../assets/68747470733a2f2f7777772e737461727469737261656c2e636f2e696c2f75706c6f6164732f696d616765732f6c6f676f5f7376672e706e67.png">
 
-  <ion-input type="tel" placeholder="מספר טלפון" text-center (input)="isShabusMember($event)" margin-top></ion-input>
+  <ion-input type="tel" placeholder="מספר טלפון" text-center [(ngModel)]="phoneNumber" margin-top></ion-input>
 <div class="container">
 
 <ion-item>
@@ -33,7 +33,7 @@
 
 
 
-<button ion-button block color="light" large text-center margin-top (click)="GoToMoovitPage()">הירשם לנסיעה</button>
+<button ion-button block color="light" large text-center margin-top (click)="send()">הירשם לנסיעה</button>
 
 
 

@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpModule} from '@angular/http';
 
 import { MyApp } from './app.component';
-import { Authunication} from '../services/auth';
+import { Authunication} from '../services/serverside';
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
 import { MyMoovitPage } from '../pages/my-moovit/my-moovit';//--------//
@@ -25,7 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    HttpModule,
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

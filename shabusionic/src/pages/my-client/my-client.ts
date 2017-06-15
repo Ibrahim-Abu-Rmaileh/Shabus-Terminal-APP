@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
+import { Authunication} from '../../services/serverside'
 import { MyMoovitPage } from '../my-moovit/my-moovit';//--------//
+import{ LoadingController} from 'ionic-angular'
 
-/**
- * Generated class for the MyClientPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-my-client',
@@ -17,9 +12,9 @@ import { MyMoovitPage } from '../my-moovit/my-moovit';//--------//
 export class MyClientPage {
 
   clientCounter: number;
-  phoneNumber: string;
+  phoneNumber: string="";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private auth:Authunication,private Loadingcontrol:LoadingController,private alert:AlertController) {
     this.clientCounter=1;
   }
 
@@ -39,19 +34,55 @@ export class MyClientPage {
     }
   }
 
-  isShabusMember(input){
-    //console.log(input.target.value);
-    //console.log(this.phoneNumber);
-    this.phoneNumber = input.target.value;
-    if(input.target.value===this.phoneNumber){
-      console.log("Client is shabus member");
+
+  send(){
+
+
+     const loading=this.Loadingcontrol.create({
+content:' ...בדיקת ניתונים'
+    });
+     loading.present();
+
+   this.auth.getuser().getToken().then( (token:string) => {
+   this.auth.send(token).subscribe((response:any) => {
+     loading.dismiss();
+console.log("sucess!");
+var x=response.json();
+      console.log(x);
+      let data={};
+      for (let prop in x) {
+      data=x[prop]
     }
-  }
+    let check=false;
+      for (let prop in data) {
+if(data[prop]==this.phoneNumber ){
+  check=true;
+const alert=this.alert.create({
+  title:"הפרטים נקלטו",
+buttons:['Ok']
+
+});
+alert.present();
+break;
+}
 
 
-  GoToMoovitPage(){
-    let phoneNum = this.phoneNumber;
-    this.navCtrl.push(MyMoovitPage, {phoneNum});
+      }
+      if(check==false){
+  this.navCtrl.push(MyMoovitPage);
+}
+
+
+   },
+   error => {
+     loading.dismiss();
+     console.log(error);
+   }
+   );
+   
+
+   });
+
   }
 
 

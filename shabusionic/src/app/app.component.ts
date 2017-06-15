@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import firebase from 'firebase';
-import {Authunication} from '../services/auth';
+import {Authunication} from '../services/serverside';
 import { MyDriverLoginPage } from '../pages/my-driver-login/my-driver-login';//--------//
 import { MyClientPage } from '../pages/my-client/my-client';//--------//
 import { MyCouponsPage } from '../pages/my-coupons/my-coupons';//--------//
@@ -24,7 +24,7 @@ export class MyApp {
     this.initializeApp();
     firebase.initializeApp({
       apiKey: "AIzaSyABh5mvOXy7lwRl0knUqxyYPlqLSHEHfLU",
-    authDomain: "shapus-ecbb4.firebaseapp.com"
+    authDomain: "shapus-ecbb4.firebaseapp.com",
     });
 firebase.auth().onAuthStateChanged(user => {
   if(user){
@@ -40,7 +40,6 @@ firebase.auth().onAuthStateChanged(user => {
       { title: 'קופונים', component: MyCouponsPage},
       { title: 'שקל לק"מ', component: MyShekelPerKmPage}
     ];
-
   }
 
   initializeApp() {

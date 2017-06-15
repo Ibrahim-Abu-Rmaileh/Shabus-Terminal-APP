@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams ,AlertController} from 'ionic-angular';
 import{ LoadingController} from 'ionic-angular'
  //import { MyClientPagerror.messagee } from '../my-client/my-client';//--------//
-import {Authunication} from '../../services/auth';
+import {Authunication} from '../../services/serverside';
 /**
  * Generated class for the MyDriverLoginPage page.
  *
@@ -18,10 +18,17 @@ export class MyDriverLoginPage {
 username:string="";
 password:string="";
 
+splash = true;
+  
+
+
   constructor(private alert:AlertController,private auth:Authunication ,private navCtrl: NavController, private navParams: NavParams,private Loadingcontrol:LoadingController) {
-    
+
   }
 
+ionViewDidLoad() {
+    setTimeout(() => this.splash = false, 3000);
+  }
 
   onsignin(){
 
@@ -32,7 +39,7 @@ content:' ...מתחבר'
     this.auth.signin(this.username,this.password).then(data => {
 loading.dismiss();
 
-  setTimeout( nothing => {
+  setTimeout( () => {
 
 const alert=this.alert.create({
   title:"המשמרת הסתיימה",
