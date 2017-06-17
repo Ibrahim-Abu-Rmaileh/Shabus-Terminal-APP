@@ -7,18 +7,37 @@
 <ion-header>
 
   <ion-navbar color="dark">
+    <button ion-button menuToggle right>
+      <ion-icon name="menu" side="right"></ion-icon>
+    </button>
     <ion-title>קופונים</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="coupons" padding text-center>
 
-    <img src="../../assets/68747470733a2f2f7777772e737461727469737261656c2e636f2e696c2f75706c6f6164732f696d616765732f6c6f676f5f7376672e706e67.png">
-  <br/>
-  <p style="font-size: 30px">
-  <b>דף זה בבניה</b>
-  </p>
+
+
+ <img ion-button item-start src="../../assets/icon.png" class="business1" (click)="chooseBusiness('business1')" color="blank">
+ <img ion-button item-start src="../../assets/icon.png" class="business2" (click)="chooseBusiness('business2')" color="blank">
+ <img ion-button item-start src="../../assets/icon.png" class="business3" (click)="chooseBusiness('business3')" color="blank">
+ <img ion-button item-start src="../../assets/icon.png" class="business4" (click)="chooseBusiness('business4')" color="blank">
+ <img ion-button item-start src="../../assets/icon.png" class="business5" (click)="chooseBusiness('business5')" color="blank">
+
+
+  <ion-input class="inp" type="tel" placeholder="מספר כרטיס" [(ngModel)]="cardNumber" text-center margin-top></ion-input>
+  <ion-input class="inp" type="tel" placeholder="מספר סלולרי ללא מקפים: 1234567" [(ngModel)]="phoneNumber" text-center margin-top></ion-input>
+
+
+  <button ion-button large block color="dark" (click)="rideRegistration()" margin-top>רישום נסיעה</button>
+
+
+
+
+
+
+
 
 </ion-content>
