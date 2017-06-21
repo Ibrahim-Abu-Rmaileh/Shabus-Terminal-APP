@@ -15,6 +15,8 @@ import { MyShekelPerKmPage } from '../pages/my-shekel-per-km/my-shekel-per-km';/
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -40,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     
   ],
   providers: [
+    Geolocation,
     StatusBar,
     SplashScreen,
    Authunication,

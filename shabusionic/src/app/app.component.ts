@@ -9,6 +9,8 @@ import { MyClientPage } from '../pages/my-client/my-client';//--------//
 import { MyCouponsPage } from '../pages/my-coupons/my-coupons';//--------//
 import { MyShekelPerKmPage } from '../pages/my-shekel-per-km/my-shekel-per-km';//--------//
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +24,7 @@ export class MyApp {
 
   public isToggled : boolean;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private auth:Authunication, public menuCtrl:MenuController) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private auth:Authunication, public menuCtrl:MenuController, private geolocation:Geolocation) {
     this.isToggled = false;
     this.initializeApp();
     firebase.initializeApp({
@@ -70,8 +72,16 @@ firebase.auth().onAuthStateChanged(user => {
   }
 
 
-
+  /*get current location and print the coordinates.*/
   whenToggle(){
+    if(this.isToggled){
+      this.geolocation.getCurrentPosition().then((resp)=>{
+        console.log(resp.coords.latitude);
+        console.log(resp.coords.longitude);
+      }).catch((error)=>{
+        console.log('Error getting location', error)
+      });
+    }
 
   }
 
