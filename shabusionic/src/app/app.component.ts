@@ -20,7 +20,10 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
+  public isToggled : boolean;
+
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private auth:Authunication, public menuCtrl:MenuController) {
+    this.isToggled = false;
     this.initializeApp();
     firebase.initializeApp({
       apiKey: "AIzaSyABh5mvOXy7lwRl0knUqxyYPlqLSHEHfLU",
@@ -65,6 +68,19 @@ firebase.auth().onAuthStateChanged(user => {
    this.menuCtrl.enable(false, 'myMenu'); 
    this.auth.logout();
   }
+
+
+
+  whenToggle(){
+
+  }
+
+
+
+
+
+
+
 
 
 }

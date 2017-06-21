@@ -10,6 +10,10 @@
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" text-right>
         {{p.title}}
       </button>
+      <ion-item>
+        <ion-label text-right>מיקום</ion-label>
+        <ion-toggle item-start [(ngModel)]="isToggled" (ionChange)="whenToggle()"></ion-toggle>
+      </ion-item>  
     </ion-list>
 
     <button ion-button color="blue" class="logoutCmd" (click)="logout()" menuClose> התנתק </button> 
