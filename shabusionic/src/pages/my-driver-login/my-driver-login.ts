@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams ,AlertController} from 'ionic-angul
 import{ LoadingController} from 'ionic-angular'
  //import { MyClientPagerror.messagee } from '../my-client/my-client';//--------//
 import {Authunication} from '../../services/serverside';
+
+
 /**
  * Generated class for the MyDriverLoginPage page.
  *
@@ -28,6 +30,7 @@ splash = true;
 
 ionViewDidLoad() {
     setTimeout(() => this.splash = false, 4000);
+   // this.menuCtrl.enable(false, 'myMenu');
   }
 
   onsignin(){

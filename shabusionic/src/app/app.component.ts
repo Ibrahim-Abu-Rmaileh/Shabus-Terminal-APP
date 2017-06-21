@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import firebase from 'firebase';
@@ -20,7 +20,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private auth:Authunication) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private auth:Authunication, public menuCtrl:MenuController) {
     this.initializeApp();
     firebase.initializeApp({
       apiKey: "AIzaSyABh5mvOXy7lwRl0knUqxyYPlqLSHEHfLU",
@@ -29,6 +29,7 @@ export class MyApp {
 firebase.auth().onAuthStateChanged(user => {
   if(user){
     this.nav.setRoot(MyClientPage);
+    menuCtrl.enable(true, 'myMenu');
 }else{
     this.nav.setRoot(MyDriverLoginPage);
 
@@ -48,6 +49,7 @@ firebase.auth().onAuthStateChanged(user => {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.menuCtrl.enable(false, 'myMenu'); //disable menu for login page;
     });
   }
 
@@ -60,6 +62,7 @@ firebase.auth().onAuthStateChanged(user => {
   }
 
   logout(){
+   this.menuCtrl.enable(false, 'myMenu'); 
    this.auth.logout();
   }
 
